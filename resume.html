@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipesh Raghav - Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #ffff00;
+            /* Batman Yellow */
+            --secondary-color: #000000;
+            /* Batman Black */
+            --text-color: #f5f5f5;
+            --light-text: #ffffff;
+            --bg-color: #1a1a1a;
+            --section-bg: #121212;
+            --card-bg: #2a2a2a;
+            --border-radius: 5px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            background-image: url('batman-logo.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: 30% auto;
+            background-blend-mode: soft-light;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(26, 26, 26, 0.92);
+            z-index: -1;
+            backdrop-filter: blur(2px);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--primary-color);
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.8);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            color: var(--light-text);
+        }
+
+        .contact-item i {
+            margin-right: 8px;
+            color: var(--primary-color);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .section-title i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: var(--primary-color);
+        }
+
+        .entry {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 2px solid rgba(255, 255, 0, 0.3);
+            position: relative;
+        }
+
+        .entry:hover {
+            border-left: 2px solid var(--primary-color);
+        }
+
+        .entry::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .entry-title {
+            font-weight: 600;
+            color: var(--light-text);
+        }
+
+        .entry-date {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            list-style: none;
+        }
+
+        .skill-item {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 10px 15px;
+            border-left: 3px solid var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .skill-item:hover {
+            transform: translateX(5px);
+            background-color: rgba(255, 255, 0, 0.1);
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--primary-color);
+        }
+
+        @media print {
+            body {
+                background: none;
+                color: black;
+            }
+
+            body::before {
+                display: none;
+            }
+
+            .container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+            }
+
+            .back-button {
+                display: none;
+            }
+
+            h1,
+            h2,
+            h3,
+            .section-title i,
+            .contact-item i,
+            .entry-date {
+                color: black;
+            }
+
+            h2::after,
+            .entry::before {
+                background-color: black;
+            }
+
+            .entry {
+                border-left-color: rgba(0, 0, 0, 0.3);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Dipesh Raghav</h1>
+            <p>The Dark Knight of Programming | First-Year Computer Science Student</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>dipeshraghav69@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <span>github.com/DipeshRaghav</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Gotham City</span>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div class="section-title">
+                <i class="fas fa-user-secret"></i>
+                <h2>Secret Identity</h2>
+            </div>
+            <p>First-year Computer Science student with a passion for protecting Gotham's digital landscape. Proficient
+                in multiple programming languages with a focus on web development and artificial intelligence. Known for
+                problem-solving abilities and commitment to justice in the coding world.</p>
+        </section>
+
+        <section>
+            <div class="section-title">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>Bat Training</h2>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <h3 class="entry-title">Bachelor of Computer Science</h3>
+                    <span class="entry-date">2023 - Present</span>
+                </div>
+                <p>Gotham University</p>
+                <p>Relevant Coursework: Algorithms & Data Structures, Web Development, Database Systems, Computer
+                    Networks</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">
+                <i class="fas fa-shield-alt"></i>
+                <h2>Crime Fighting Experience</h2>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <h3 class="entry-title">Freelance Developer</h3>
+                    <span class="entry-date">2022 - Present</span>
+                </div>
+                <p>Self-employed | Remote</p>
+                <ul>
+                    <li>Developed responsive websites for small businesses</li>
+                    <li>Created a fake news detection system using Python and ML</li>
+                    <li>Optimized website performance increasing loading speed by 40%</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <h3 class="entry-title">Open Source Contributor</h3>
+                    <span class="entry-date">2023 - Present</span>
+                </div>
+                <p>GitHub</p>
+                <ul>
+                    <li>Contributed to various open-source projects</li>
+                    <li>Fixed bugs and implemented new features</li>
+                    <li>Collaborated with developers worldwide</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">
+                <i class="fas fa-bolt"></i>
+                <h2>Bat Arsenal (Skills)</h2>
+            </div>
+            <ul class="skills-list">
+                <li class="skill-item">HTML/CSS</li>
+                <li class="skill-item">JavaScript</li>
+                <li class="skill-item">Python</li>
+                <li class="skill-item">C++</li>
+                <li class="skill-item">Git</li>
+                <li class="skill-item">VS Code</li>
+                <li class="skill-item">Problem Solving</li>
+                <li class="skill-item">Teamwork</li>
+                <li class="skill-item">Communication</li>
+                <li class="skill-item">Leadership</li>
+            </ul>
+        </section>
+
+        <section>
+            <div class="section-title">
+                <i class="fas fa-award"></i>
+                <h2>Achievements</h2>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <h3 class="entry-title">Hackathon Winner</h3>
+                    <span class="entry-date">2023</span>
+                </div>
+                <p>First place in Gotham Tech Hackathon for developing an innovative crime reporting app</p>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <h3 class="entry-title">Dean's List</h3>
+                    <span class="entry-date">2023</span>
+                </div>
+                <p>Recognized for outstanding academic achievement in first semester</p>
+            </div>
+        </section>
+
+        <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Return to Batcave</a>
+    </div>
+</body>
+
+</html>
