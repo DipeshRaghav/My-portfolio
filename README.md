@@ -26,7 +26,9 @@ A responsive Batman-themed portfolio website for a first-year computer science s
 
 ## 🚀 Live Demo
 
-Check out the live site: [Gotham's Guardian Portfolio](https://dipeshraghav.github.io/My-portfolio/)
+Check out the live site on Vercel: [Gotham's Guardian Portfolio](https://my-portfolio-chi-red-63.vercel.app/)
+
+Alternative link on GitHub Pages: [GitHub Pages Deployment](https://dipeshraghav.github.io/My-portfolio/)
 
 ## 📋 Getting Started
 
@@ -56,22 +58,25 @@ To customize this portfolio for your own use:
 
 ## 🌐 Deployment
 
-### Current Deployment
+### Current Deployments
 
-This site is deployed using GitHub Pages and can be accessed at [https://dipeshraghav.github.io/My-portfolio/](https://dipeshraghav.github.io/My-portfolio/)
+This site is deployed to multiple platforms:
+
+#### Vercel (Primary)
+- **URL**: [my-portfolio-chi-red-63.vercel.app](https://my-portfolio-chi-red-63.vercel.app/)
+- Benefits:
+  - Global CDN for faster loading worldwide
+  - Automatic HTTPS security
+  - Continuous deployment from GitHub
+  - Student benefits available
+
+#### GitHub Pages (Secondary)
+- **URL**: [dipeshraghav.github.io/My-portfolio](https://dipeshraghav.github.io/My-portfolio/)
 
 ### Alternative Deployment Options
 
-#### Vercel (Recommended for Students)
-- Free hosting with Vercel student benefits
-- Automatic HTTPS and global CDN
-- Simple deployment from GitHub repository
-- Custom subdomains with `vercel.app`
-
-#### Other Options:
 - **Netlify**: Continuous deployment from Git
-- **GitHub Pages**: Free hosting directly from your repository
-- **Custom Domain**: Purchase a domain and connect it to your deployment
+- **Custom Domain**: Purchase a domain and connect it to your Vercel or GitHub deployment
 
 ## 📁 Project Structure
 
