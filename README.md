@@ -1,6 +1,6 @@
 # Gotham's Guardian - Batman-Themed Portfolio
 
-![Batman Logo](batman-logo.svg)
+![Batman Logo](batman-svgrepo-com.svg)
 
 A responsive Batman-themed portfolio website for a first-year computer science student, featuring sections for About, Projects, Skills, and Contact. The site combines professional portfolio elements with a cohesive Batman theme.
 
